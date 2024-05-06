@@ -1,5 +1,4 @@
 const slugify = require("@sindresorhus/slugify");
-const pluginPDFEmbed = require('eleventy-plugin-pdfembed');
 const markdownIt = require("markdown-it");
 const fs = require("fs");
 const matter = require("gray-matter");
