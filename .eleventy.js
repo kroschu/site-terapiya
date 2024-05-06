@@ -1,4 +1,16 @@
 const slugify = require("@sindresorhus/slugify");
+const pluginPDFEmbed = require('eleventy-plugin-pdfembed');
+
+module.exports = (eleventyConfig) => {
+
+	// more stuff here
+
+	eleventyConfig.addPlugin(pluginPDFEmbed, {
+		key: '<YOUR CREDENTIAL KEY>'
+	});
+
+
+};
 const markdownIt = require("markdown-it");
 const fs = require("fs");
 const matter = require("gray-matter");
