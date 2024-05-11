@@ -43,20 +43,27 @@ module.exports = function (eleventyConfig) {
 `;
   });
 
-eleventyConfig.addShortcode("tiktok", (videoURL) => {
+eleventyConfig.addShortcode("tiktokInfinite", (videoURL) => {
     const url = new URL(videoURL);
     const videoId = url.pathname.split("/").pop();
     if (!videoId) {
         console.error("Unable to extract video ID from the provided URL:", videoURL);
         return ""; // Return empty string if video ID cannot be extracted
     }
-    return `
+
+    let tiktokEmbed = `
 <blockquote class="tiktok-embed" cite="${videoURL}" data-video-id="${videoId}">
   <section> </section>
 </blockquote>
 <script async src="https://www.tiktok.com/embed.js"></script>
 `;
+
+    // Repeat the embed infinitely
+    tiktokEmbed = tiktokEmbed.repeat(1000); // Adjust the number of repetitions as needed
+
+    return tiktokEmbed;
 });
+
 
   eleventyConfig.setLiquidOptions({
     dynamicPartials: true,
