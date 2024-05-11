@@ -57,11 +57,6 @@ eleventyConfig.addShortcode("tiktokInfinite", (videoURL) => {
 </blockquote>
 <script async src="https://www.tiktok.com/embed.js"></script>
 `;
-
-    // Repeat the embed infinitely
-    tiktokEmbed = tiktokEmbed.repeat(1000); // Adjust the number of repetitions as needed
-
-    return tiktokEmbed;
 });
 
 
