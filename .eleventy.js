@@ -43,15 +43,20 @@ module.exports = function (eleventyConfig) {
 `;
   });
  
- module.exports = function(eleventyConfig) {
-  eleventyConfig.addShortcode("audioPlayer", function(src, title) {
-    return `<audio controls>
-              <source src="${src}" type="audio/mpeg">
-              Your browser does not support the audio element.
-            </audio>
-            <p>${title}</p>`;
-  });
-};
+ eleventyConfig.addShortcode("audioPlayer", (audioSrc, audioTitle) => {
+  if (!audioSrc) {
+    console.error("Audio source is required.");
+    return ""; // Return empty string if audio source is not provided
+  }
+  return `
+<audio controls>
+  <source src="${audioSrc}" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+${audioTitle ? `<p>${audioTitle}</p>` : ""}
+`;
+});
+
 
 
 eleventyConfig.addShortcode("tiktok", (videoURL) => {
