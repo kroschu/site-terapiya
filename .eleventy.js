@@ -42,6 +42,17 @@ module.exports = function (eleventyConfig) {
     }" frameborder="0" allowfullscreen></iframe>
 `;
   });
+ 
+ module.exports = function(eleventyConfig) {
+  eleventyConfig.addShortcode("audioPlayer", function(src, title) {
+    return `<audio controls>
+              <source src="${src}" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+            <p>${title}</p>`;
+  });
+};
+
 
 eleventyConfig.addShortcode("tiktok", (videoURL) => {
     const url = new URL(videoURL);
