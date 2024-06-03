@@ -2,6 +2,7 @@
 {"title":"Про проект","dg-publish":true,"dg-metatags":null,"dg-home":null,"permalink":"/expecto-patronum/","dgPassFrontmatter":true,"noteIcon":""}
 ---
 
+{% youtube "https://m.youtube.com/watch?v=ar0SMW5lOZs", "Джельсаміно з нами ))" %}
 
 Проект  **expecto patronum**
 присвячений захисту моєї
