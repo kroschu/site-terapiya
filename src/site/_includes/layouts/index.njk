@@ -36,10 +36,11 @@
       {% endif %}
       {% if metatags is defined %}
       {% if metatags.startsWith('https://') %}
-      <iframe src={{ metatags }} width="100%" height="600px">
+      <iframe src={{ metatags }} width="100%" height="500px">
         <p>Ваш браузер не підтримує елемент iframe.</p>
       </iframe>
-      {% else %}
+      {% endif %} 
+      {% endif %} 
       <div class="header-meta">
         {% if settings.dgShowTags === true and tags %}
           <div class="header-tags">
