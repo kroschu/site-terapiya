@@ -34,7 +34,12 @@
       {% if settings.dgShowInlineTitle === true %}
         <h1>{{ noteTitle  }}</h1>
       {% endif %}
-
+      {% if metatags is defined %}
+      {% if metatags.startsWith('https://') %}
+      <iframe src={{ metatags }} width="100%" height="600px">
+        <p>Ваш браузер не підтримує елемент iframe.</p>
+      </iframe>
+      {% else %}
       <div class="header-meta">
         {% if settings.dgShowTags === true and tags %}
           <div class="header-tags">
