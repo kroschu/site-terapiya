@@ -15,8 +15,8 @@
 <body>
 
     <!-- DrakonWidget вставка внизу сторінки -->
-    <div id="drakon-container"></div>
-    
+    <div id="drakon-container" style="width: 100%; height: 500px;"></div> <!-- Додаємо стилі -->
+
     <!-- Підключаємо необхідні скрипти -->
     <script src="/libs/drakonwidget.js"></script>
     <script src="/libs/mousetrap.min.js"></script>
@@ -31,7 +31,11 @@
         DrakonWidget.create({
             element: document.getElementById("drakon-container"),
             diagram: {
-                /* JSON для вашої діаграми, або залиште пустим для створення нової */
+                nodes: [
+                    { id: 1, text: "Start", type: "begin" },
+                    { id: 2, text: "Do something", type: "action", next: 3 },
+                    { id: 3, text: "End", type: "end" }
+                ]
             },
             options: {
                 editable: true
