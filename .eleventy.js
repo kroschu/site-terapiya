@@ -42,6 +42,21 @@ module.exports = function (eleventyConfig) {
     }" frameborder="0" allowfullscreen></iframe>
 `;
   });
+  
+module.exports = function(eleventyConfig) {
+    // Копіюємо статичні файли до вихідної директорії
+    eleventyConfig.addPassthroughCopy("src/libs");
+    eleventyConfig.addPassthroughCopy("src/js");
+    eleventyConfig.addPassthroughCopy("src/styles");
+
+    // Інші налаштування
+    return {
+        dir: {
+            input: "src",
+            output: "dist"
+        }
+    };
+};
  
  eleventyConfig.addShortcode("audioPlayer", (audioSrc, audioTitle) => {
   if (!audioSrc) {
