@@ -13,17 +13,6 @@
     <meta property="og:image" content="/images/drakon-widget-hero.png">
     <link rel="shortcut icon" href="/images/favicon.ico" />
     <link rel="icon" type="image/png" href="/images/favicon.png" />
-    <style>
-        *,
-        *:before,
-        *:after {
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-        }
-    </style>
-    <link rel="stylesheet" href="/styles/reset.css" />
-    <link rel="stylesheet" href="/styles/main.css" />
 </head>
 
 <body>
@@ -32,8 +21,8 @@
         <div id="editor-area"></div>
         <div id="menu" class="main-menu shadow">
             <div class="menu-block">
-                <div id="close-button" class="generic-button simple-button" style="padding-left:0px;">
-                    <img src="/images/delete.png"><span>Close</span>
+                <div id="close-button" style="padding-left:0px; cursor:pointer;">
+                    <img src="/images/delete.png" alt="Close"><span>Close</span>
                 </div>
                 <div class="menu-header">DrakonWidget online demo</div>
             </div>
@@ -41,44 +30,40 @@
                 <table style="width: 100%;">
                     <tr>
                         <td style="width: 60px;">
-                            <div><img class="menu-logo" src="/images/dra2.png" /></div>
+                            <div><img src="/images/dra2.png" alt="Logo" /></div>
                         </td>
-                        <td style="width: calc(100% - 60px); text-align: right; vertical-align: top;">
+                        <td style="text-align: right; vertical-align: top;">
                             <p><a href="https://github.com/stepan-mitkin/drakonwidget">Documentation</a></p>
                             <p>
-                                <div id="create-diagram-button" class="generic-button default-button"
-                                    style="margin-right:0px;">Create diagram</div>
+                                <div id="create-diagram-button" style="cursor:pointer;">Create diagram</div>
                             </p>
                         </td>
                     </tr>
                 </table>
             </div>
             <div class="menu-block">
-                <div class="menu-label">Select diagram</div>
-                <select id="diagrams-combobox" class="main-menu-combobox"></select>
+                <label for="diagrams-combobox">Select diagram</label>
+                <select id="diagrams-combobox"></select>
             </div>
             <div class="menu-block">
-                <div id="delete-diagram-button" class="generic-button simple-button">Delete diagram</div>
-                <div id="duplicate-diagram-button" class="generic-button simple-button">Duplicate diagram</div>
-                <div id="set-diagram-json-button" class="generic-button simple-button"
-                    style="margin-right: 0px;">Diagram JSON...</div>
+                <button id="delete-diagram-button">Delete diagram</button>
+                <button id="duplicate-diagram-button">Duplicate diagram</button>
+                <button id="set-diagram-json-button">Diagram JSON...</button>
             </div>
             <div class="menu-block">
-                <div class="menu-label">Color theme</div>
-                <select id="themes-combobox" class="main-menu-combobox"></select>
-            </div>
-            <div class="menu-block" style="height: 46px;">
-                <div id="set-theme-json-button" class="generic-button simple-button right-button"
-                    style="margin-right: 0px;">Theme JSON...</div>
+                <label for="themes-combobox">Color theme</label>
+                <select id="themes-combobox"></select>
             </div>
             <div class="menu-block">
-                <div class="menu-label">Editor mode</div>
-                <select id="modes-combobox" class="main-menu-combobox"></select>
+                <button id="set-theme-json-button">Theme JSON...</button>
             </div>
             <div class="menu-block">
-                <div id="reset-all-diagrams-button" class="generic-button bad-button">Reset all diagrams</div>
+                <label for="modes-combobox">Editor mode</label>
+                <select id="modes-combobox"></select>
             </div>
-            <div style="height: 10px"></div>
+            <div class="menu-block">
+                <button id="reset-all-diagrams-button" style="color:red;">Reset all diagrams</button>
+            </div>
         </div>
         <div id="snack-root"></div>
         <div id="question-root"></div>
