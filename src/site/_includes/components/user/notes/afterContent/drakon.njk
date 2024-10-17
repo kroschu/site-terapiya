@@ -9,13 +9,11 @@
     <!-- Вказуємо шляхи до стилів -->
     <link rel="stylesheet" href="/styles/reset.css" />
     <link rel="stylesheet" href="/styles/main.css" />
-
-    <!-- Інші ваші стилі та скрипти -->
 </head>
 <body>
 
     <!-- DrakonWidget вставка внизу сторінки -->
-    <div id="drakon-container" style="width: 100%; height: 500px;"></div> <!-- Додаємо стилі -->
+    <div id="drakon-container" style="width: 100%; height: 500px;"></div>
 
     <!-- Підключаємо необхідні скрипти -->
     <script src="/libs/drakonwidget.js"></script>
@@ -27,18 +25,20 @@
 
     <!-- Ініціалізація DrakonWidget -->
     <script>
-        DrakonWidget.create({
-            element: document.getElementById("drakon-container"),
-            diagram: {
-                nodes: [
-                    { id: 1, text: "Start", type: "begin" },
-                    { id: 2, text: "Do something", type: "action", next: 3 },
-                    { id: 3, text: "End", type: "end" }
-                ]
-            },
-            options: {
-                editable: true
-            }
+        document.addEventListener("DOMContentLoaded", function() {
+            DrakonWidget.create({
+                element: document.getElementById("drakon-container"),
+                diagram: {
+                    nodes: [
+                        { id: 1, text: "Start", type: "begin" },
+                        { id: 2, text: "Do something", type: "action", next: 3 },
+                        { id: 3, text: "End", type: "end" }
+                    ]
+                },
+                options: {
+                    editable: true
+                }
+            });
         });
     </script>
 </body>
