@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="https://do.stopbot.pp.ua/drakonwidget/images/favicon.ico" />
     <link rel="icon" type="image/png" href="https://do.stopbot.pp.ua/drakonwidget/images/favicon.png" />
 
-    <!-- Абсолютні шляхи до CSS файлів -->
+    <!-- Вбудовані CSS -->
     <style>
         *,
         *:before,
@@ -24,9 +24,91 @@
             -moz-box-sizing: border-box;
             box-sizing: border-box;
         }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #main {
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #left-toolbar {
+            width: 60px;
+            background-color: #f4f4f4;
+            border-right: 1px solid #ddd;
+        }
+
+        #editor-area {
+            flex-grow: 1;
+            background-color: #fff;
+        }
+
+        .main-menu {
+            width: 300px;
+            background-color: #fafafa;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .menu-block {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .menu-header {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .menu-logo {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .generic-button {
+            display: inline-block;
+            padding: 8px 12px;
+            margin-right: 10px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .simple-button {
+            background-color: #6c757d;
+        }
+
+        .default-button {
+            background-color: #28a745;
+        }
+
+        .bad-button {
+            background-color: #dc3545;
+        }
+
+        .main-menu-combobox {
+            width: 100%;
+            padding: 6px;
+            font-size: 14px;
+        }
+
+        .menu-label {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .shadow {
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
     </style>
-    <link rel="stylesheet" href="https://do.stopbot.pp.ua/drakonwidget/styles/reset.css" />
-    <link rel="stylesheet" href="https://do.stopbot.pp.ua/drakonwidget/styles/main.css" />
 </head>
 
 <body>
