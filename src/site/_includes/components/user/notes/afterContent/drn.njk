@@ -1,21 +1,18 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>{{ title | safe }}</title>
-    <meta name="description" content="{{ description | safe }}" />
-    <meta property="og:title" content="DrakonWidget online demo">
-    <meta property="og:description" content="DrakonWidget online demo shows how to use DrakonWidget in your application. This demo is an online
+    <title>DrakonWidget online demo</title>
+    <meta name="description" content="DrakonWidget online demo shows how to use DrakonWidget in your application. This demo is an online
+        mini-editor for drakon flowcharts that does not require registration." />
+        <meta property="og:title" content="DrakonWidget online demo">
+        <meta property="og:description" content="DrakonWidget online demo shows how to use DrakonWidget in your application. This demo is an online
         mini-editor for drakon flowcharts that does not require registration.">
-    <meta property="og:image" content="/images/drakon-widget-hero.png">
-
-    <!-- Заміна відносних шляхів на абсолютні -->
-    <link rel="shortcut icon" href="/images/favicon.ico" />
-    <link rel="icon" type="image/png" href="/images/favicon.png" />
-
-    <!-- CSS файли з папки styles -->
+        <meta property="og:image" content="images/drakon-widget-hero.png">
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
     <style>
         *,
         *:before,
@@ -25,8 +22,8 @@
             box-sizing: border-box;
         }
     </style>
-    <link rel="stylesheet" href="/styles/reset.css" />
-    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/main.css" />
 </head>
 
 <body>
@@ -36,7 +33,7 @@
         <div id="menu" class="main-menu shadow">
             <div class="menu-block">
                 <div id="close-button" class="generic-button simple-button" style="padding-left:0px;">
-                    <img src="/images/delete.png"><span>Close</span>
+                    <img src="images/delete.png"><span>Close</span>
                 </div>
                 <div class="menu-header">DrakonWidget online demo</div>
             </div>
@@ -44,7 +41,7 @@
                 <table style="width: 100%;">
                     <tr>
                         <td style="width: 60px;">
-                            <div><img class="menu-logo" src="/images/dra2.png" /></div>
+                            <div><img class="menu-logo" src="images/dra2.png" /></div>
                         </td>
                         <td style="width: calc(100% - 60px); text-align: right; vertical-align: top;">
                             <p><a href="https://github.com/stepan-mitkin/drakonwidget">Documentation</a></p>
@@ -55,6 +52,7 @@
                         </td>
                     </tr>
                 </table>
+
             </div>
             <div class="menu-block">
                 <div class="menu-label">Select diagram</div>
@@ -89,14 +87,12 @@
         <div id="popup-root"></div>
 
     </div>
-
-    <!-- Скрипти -->
-    <script src="/libs/drakonwidget.js"></script>
-    <script src="/libs/mousetrap.min.js"></script>
-    <script src="/libs/simplewidgets.js"></script>
-    <script src="/js/examples.js"></script>
-    <script src="/js/themes.js"></script>
-    <script src="/js/main.js"></script>
+    <script src="libs/drakonwidget.js"></script>
+    <script src="libs/mousetrap.min.js"></script>
+    <script src="libs/simplewidgets.js"></script>
+    <script src="js/examples.js"></script>
+    <script src="js/themes.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
